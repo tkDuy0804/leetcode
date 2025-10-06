@@ -4,7 +4,6 @@ public:
         // Hashmap
 
         unordered_map<int,int> prevVal;
-        vector<int> indices;
 
         for(int i = 0; i < nums.size(); i++)
         {
@@ -13,14 +12,12 @@ public:
 
             if(it != prevVal.end())
             {
-                indices.push_back(prevVal.at(diff));
-                indices.push_back(i);
-                return indices;
+                return {prevVal.at(diff), i};
             }
 
             prevVal[nums.at(i)] = i;
         }
 
-        return vector<int>{};
+        return {};
     }
 };
