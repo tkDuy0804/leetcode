@@ -1,6 +1,8 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
+        // Hashmap
+
         unordered_map<int,int> prevVal;
         vector<int> indices;
 
